@@ -8,40 +8,66 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     
     <link rel="stylesheet" href="src/estilos/reset.css">
-    <link rel="stylesheet" href="src/estilos/styles.css">    
+    <link rel="stylesheet" href="src/estilos/styles.css">   
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
 
   </head>
 
-  <body>
+  <body class="container__geral">
 
-    0000 0000 0000 0000
-    Jane Appleseed
-    00/00
+    <main class="container__principal">
 
-    000
+      <section class="container__cartoes">
 
-    Cardholder Name
-    e.g. Jane Appleseed
+        <div class="cartao__frente">
+          <div class="cartao__frente--circulos">
+            <div class="circulo1"></div>
+            <div class="circulo2"></div>
+          </div>
+          <p class="cartao__frente--numero">0000 0000 0000 0000</p>          
+          <p class="cartao__frente--nome">Your name</p>
+          <p class="cartao__frente--data">00/00</p>
+        </div>
 
-    Card Number
-    e.g. 1234 5678 9123 0000
+        <div class="cartao__fundo"> 
+          <figure class="cartao__fundo--imagem">
+            <img src="src/images/bg-card-back.png" alt="Parte de trás do cartão">
+          </figure>
+          
+          000
+        </div>
+        
+      </section>
+      <section class="container__formulario">
 
-    Exp. Date (MM/YY)
-    MM
-    YY
-
-    CVC
-    e.g. 123
-
-    Confirm
-
-    <!-- Completed state start -->
-
-    Thank you!
-    We've added your card details
-    Continue
+        <!-- lado direito -->
+        Cardholder Name
+        e.g. Jane Appleseed
+        
+        Card Number
+        e.g. 1234 5678 9123 0000
+        
+        Exp. Date (MM/YY)
+        MM
+        YY
+        
+        CVC
+        e.g. 123
+        
+        Confirm
+        
+      </section>
+      <!-- Completed state start -->
+<!--   
+      Thank you!
+      We've added your card details
+      Continue -->
+    </main>
     
-    <footer class="attribution">
+    <footer class="container__rodape">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="#">Matheus Trojan</a>.
     </footer>

@@ -1,0 +1,34 @@
+@import url("../estilos/cartoes.css");
+
+:root {
+    --fonte-principal: 'Space Grotesk';
+
+    --branco: hsl(0, 0%, 100%);
+    --violeta-fraco: hsl(270, 3%, 87%);
+    --violeta-medio: hsl(279, 6%, 55%);
+    --violeta-forte: hsl(278, 68%, 11%);
+}
+
+.container__geral {
+    background-image: url("../images/bg-main-desktop.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-sizing: border-box;
+    font-family: var(--fonte-principal);
+    min-height: 100vh;
+}
+
+.container__principal {
+    align-items: center;
+    display: flex;
+    padding: 8em;
+    height: calc(95vh - 16em);
+}
+
+.container__rodape {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 5vh;
+}
+

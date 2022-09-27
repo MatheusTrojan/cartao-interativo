@@ -1,0 +1,75 @@
+.container__cartoes {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.cartao__frente {
+    align-items: flex-end;
+    background-image: url("../images/bg-card-front.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    bottom: 50%;
+    box-sizing: border-box;
+    color: var(--branco);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    height: 245px;
+    left: 12%;
+    padding: 1.5rem;
+    position: absolute;
+    width: 447px;
+}
+
+.cartao__frente--circulos {
+    align-items: center;
+    display: flex;
+    gap: 1em;
+    grid-column: 1/1;
+}
+
+.circulo1 {
+    background-color: var(--branco);
+    border-radius: 50%;
+    height: 2.5em;
+    width: 2.5em;
+}
+
+.circulo2 {
+    background-color: transparent;
+    border: 1px solid var(--branco);
+    border-radius: 50%;
+    height: 1em;
+    width: 1em;
+}
+
+.cartao__frente--numero {
+    font-size: 1.6rem;
+    grid-column: 1/5;
+    grid-row: 3/4;
+    letter-spacing: 0.3rem;
+}
+
+.cartao__frente--nome {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    grid-column: 1/4;
+    grid-row: 4/4;
+    letter-spacing: 0.15rem;
+}
+
+.cartao__frente--data {
+    font-size: 0.8rem;
+    justify-self: right;
+    grid-column: 4/4;
+    grid-row: 4/4;
+    letter-spacing: 0.15rem;
+}
+
+
+.cartao__fundo {
+    position: absolute;
+    left: 18%;
+    top: 52%;
+}
