@@ -41,28 +41,19 @@
       <section class="container__formulario">
 
         <form action="" class="formulario">
-          <div class="formulario__linha1">
-            <label for="nome-completo" class="formulario__label">Cardholder Name</label>
-            <input type="text" name="nome-completo" id="nome-completo" class="formulario__input" placeholder="e.g. Your Name" required>
-          </div>
-
-          <div class="formulario__linha2">
-            <label for="numero-cartao" class="formulario__label">Card Number</label>
-            <input type="number" name="numero-cartao" id="numero-cartao" class="formulario__input" placeholder="e.g. 0000 0000 0000 0000" required>
-          </div>
-
-          <div class="formulario__linha3">
-            <div class="formulario__linha3--validade">
-              <label for="validade-mes" class="formulario__label">Exp. Date (MM/YY)</label>
-              <input type="number" name="validade-mes" id="validade-mes" class="formulario__input" placeholder="MM" maxlength="2" required>
-              <input type="number" name="validade-ano" id="validade-ano" class="formulario__input" placeholder="YY" maxlength="2" required>
-            </div>
-
-            <div class="formulario__linha3--codigo">
-              <label for="codigo-cartao" class="formulario__label">CVC</label>
-              <input type="number" name="codigo-cartao" id="codigo-cartao" class="formulario__input" placeholder="e.g. 000" maxlength="3" required>            
-            </div>
-          </div>
+          
+          <label for="nome-completo" class="formulario__label formulario__linha1">Cardholder Name</label>
+          <input type="text" name="nome-completo" id="nome-completo" class="formulario__input formulario__linha2" placeholder="e.g. Your Name" required>
+          
+          <label for="numero-cartao" class="formulario__label formulario__linha3">Card Number</label>
+          <input type="text" name="numero-cartao" id="numero-cartao" class="formulario__input formulario__linha4" placeholder="e.g. 0000 0000 0000 0000" maxlength="19" pattern="[0-9 ]*" onkeypress="mascara(this)"  required>
+          
+          <label for="validade-mes" class="formulario__label formulario__linha5--a">Exp. Date (MM/YY)</label>
+          <input type="text" name="validade-mes" id="validade-mes" class="formulario__input formulario__linha6--a" placeholder="MM" maxlength="2" pattern="[01][0-9]" required>
+          <input type="text" name="validade-ano" id="validade-ano" class="formulario__input formulario__linha6--b" placeholder="YY" maxlength="2" pattern="[0-9]*" required>
+            
+          <label for="codigo-cartao" class="formulario__label formulario__linha5--b">CVC</label>
+          <input type="number" name="codigo-cartao" id="codigo-cartao" class="formulario__input formulario__linha6--c" placeholder="e.g. 000" maxlength="3" required>            
 
           <input type="submit" name="btn-enviar" id="enviar" value="Confirm" class="formulario__botao">
         </form>        
@@ -79,5 +70,7 @@
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="#">Matheus Trojan</a>.
     </footer>
+
+    <script src="src/js/mask.js"></script>
   </body>
 </html>

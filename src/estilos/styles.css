@@ -16,6 +16,7 @@
     background-size: contain;
     box-sizing: border-box;
     font-family: var(--fonte-principal);
+    font-weight: 500;
     min-height: 100vh;
 }
 
