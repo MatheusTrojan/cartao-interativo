@@ -10,11 +10,13 @@
     background-repeat: no-repeat;
     background-size: 100%;
     bottom: 50%;
+    border-radius: 0.5rem;
+    box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
     box-sizing: border-box;
     color: var(--branco);
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     height: 245px;
     left: 12%;
     padding: 1.5rem;
@@ -69,7 +71,29 @@
 
 
 .cartao__fundo {
-    position: absolute;
+    align-items: center;
+    background-image: url("../images/bg-card-back.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+    color: var(--branco);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    height: 245px;
     left: 18%;
-    top: 52%;
+    top: 54%;
+    padding: 1.5rem;
+    position: absolute;
+    width: 447px;
 }
+
+.cartao__fundo--codigo {
+    grid-column: 4/4;
+    grid-row: 3/4;
+    justify-self: center;
+    letter-spacing: 0.2rem;
+}
+

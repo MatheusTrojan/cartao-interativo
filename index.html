@@ -29,36 +29,44 @@
           </div>
           <p class="cartao__frente--numero">0000 0000 0000 0000</p>          
           <p class="cartao__frente--nome">Your name</p>
-          <p class="cartao__frente--data">00/00</p>
+          <p class="cartao__frente--data">MM/YY</p>
         </div>
 
         <div class="cartao__fundo"> 
-          <figure class="cartao__fundo--imagem">
-            <img src="src/images/bg-card-back.png" alt="Parte de trás do cartão">
-          </figure>
-          
-          000
+          <p class="cartao__fundo--codigo">000</p>
         </div>
-        
+
       </section>
+
       <section class="container__formulario">
 
-        <!-- lado direito -->
-        Cardholder Name
-        e.g. Jane Appleseed
-        
-        Card Number
-        e.g. 1234 5678 9123 0000
-        
-        Exp. Date (MM/YY)
-        MM
-        YY
-        
-        CVC
-        e.g. 123
-        
-        Confirm
-        
+        <form action="" class="formulario">
+          <div class="formulario__linha1">
+            <label for="nome-completo" class="formulario__label">Cardholder Name</label>
+            <input type="text" name="nome-completo" id="nome-completo" class="formulario__input" placeholder="e.g. Your Name" required>
+          </div>
+
+          <div class="formulario__linha2">
+            <label for="numero-cartao" class="formulario__label">Card Number</label>
+            <input type="number" name="numero-cartao" id="numero-cartao" class="formulario__input" placeholder="e.g. 0000 0000 0000 0000" required>
+          </div>
+
+          <div class="formulario__linha3">
+            <div class="formulario__linha3--validade">
+              <label for="validade-mes" class="formulario__label">Exp. Date (MM/YY)</label>
+              <input type="number" name="validade-mes" id="validade-mes" class="formulario__input" placeholder="MM" maxlength="2" required>
+              <input type="number" name="validade-ano" id="validade-ano" class="formulario__input" placeholder="YY" maxlength="2" required>
+            </div>
+
+            <div class="formulario__linha3--codigo">
+              <label for="codigo-cartao" class="formulario__label">CVC</label>
+              <input type="number" name="codigo-cartao" id="codigo-cartao" class="formulario__input" placeholder="e.g. 000" maxlength="3" required>            
+            </div>
+          </div>
+
+          <input type="submit" name="btn-enviar" id="enviar" value="Confirm" class="formulario__botao">
+        </form>        
+
       </section>
       <!-- Completed state start -->
 <!--   
