@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
     <title>Frontend Mentor | Interactive card details form</title>
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js">
+    </script>
     
     <link rel="stylesheet" href="src/estilos/reset.css">
     <link rel="stylesheet" href="src/estilos/styles.css">   
@@ -55,7 +58,7 @@
           <label for="codigo-cartao" class="formulario__label formulario__linha5--b">CVC</label>
           <input type="number" name="codigo-cartao" id="codigo-cartao" class="formulario__input formulario__linha6--c" placeholder="e.g. 000" maxlength="3" required>            
 
-          <input type="submit" name="btn-enviar" id="enviar" value="Confirm" class="formulario__botao">
+          <input type="submit" name="btn-enviar" id="enviar" value="Confirm" class="formulario__botao" onclick="alerta()">
         </form>        
 
       </section>
