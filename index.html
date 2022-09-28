@@ -32,7 +32,8 @@
           </div>
           <p class="cartao__frente--numero">0000 0000 0000 0000</p>          
           <p class="cartao__frente--nome">Your name</p>
-          <p class="cartao__frente--data">MM/YY</p>
+          <p class="cartao__frente--mes">MM</p>
+          <p class="cartao__frente--ano">YY</p>
         </div>
 
         <div class="cartao__fundo"> 
@@ -46,27 +47,22 @@
         <form action="" class="formulario">
           
           <label for="nome-completo" class="formulario__label formulario__linha1">Cardholder Name</label>
-          <input type="text" name="nome-completo" id="nome-completo" class="formulario__input formulario__linha2" placeholder="e.g. Your Name" required>
+          <input type="text" name="nome-completo" id="nome-completo" class="formulario__input formulario__linha2" placeholder="e.g. Your Name" oninput="inputNome()" required>
           
           <label for="numero-cartao" class="formulario__label formulario__linha3">Card Number</label>
-          <input type="text" name="numero-cartao" id="numero-cartao" class="formulario__input formulario__linha4" placeholder="e.g. 0000 0000 0000 0000" maxlength="19" pattern="[0-9 ]*" onkeypress="mascara(this)"  required>
+          <input type="text" name="numero-cartao" id="numero-cartao" class="formulario__input formulario__linha4" placeholder="e.g. 0000 0000 0000 0000" maxlength="19" minlength="19" oninput="inputNumeroCartao()"  required>
           
           <label for="validade-mes" class="formulario__label formulario__linha5--a">Exp. Date (MM/YY)</label>
-          <input type="text" name="validade-mes" id="validade-mes" class="formulario__input formulario__linha6--a" placeholder="MM" maxlength="2" pattern="[01][0-9]" required>
-          <input type="text" name="validade-ano" id="validade-ano" class="formulario__input formulario__linha6--b" placeholder="YY" maxlength="2" pattern="[0-9]*" required>
+          <input type="text" name="validade-mes" id="validade-mes" class="validade formulario__input formulario__linha6--a" placeholder="MM" maxlength="2" pattern="[01][0-9]*" oninput="inputMes()" required>
+          <input type="text" name="validade-ano" id="validade-ano" class="validade formulario__input formulario__linha6--b" placeholder="YY" maxlength="2" pattern="[0-9]*" oninput="inputAno()" required>
             
           <label for="codigo-cartao" class="formulario__label formulario__linha5--b">CVC</label>
-          <input type="number" name="codigo-cartao" id="codigo-cartao" class="formulario__input formulario__linha6--c" placeholder="e.g. 000" maxlength="3" required>            
+          <input type="number" name="codigo-cartao" id="codigo-cartao" class="formulario__input formulario__linha6--c" placeholder="e.g. 000" maxlength="3" oninput="inputCodigo()" required>            
 
-          <input type="submit" name="btn-enviar" id="enviar" value="Confirm" class="formulario__botao" onclick="alerta()">
+          <button type="submit" name="btn-enviar" id="enviar" class="formulario__botao" onclick="alerta()" disabled="true" >Confirm</button>
         </form>        
 
       </section>
-      <!-- Completed state start -->
-<!--   
-      Thank you!
-      We've added your card details
-      Continue -->
     </main>
     
     <footer class="container__rodape">

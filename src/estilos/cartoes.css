@@ -61,7 +61,7 @@
     letter-spacing: 0.15rem;
 }
 
-.cartao__frente--data {
+.cartao__frente--mes, .cartao__frente--ano {
     font-size: 0.8rem;
     justify-self: right;
     grid-column: 4/4;
@@ -69,6 +69,9 @@
     letter-spacing: 0.15rem;
 }
 
+.cartao__frente--mes {
+    margin-right: 24px;
+}
 
 .cartao__fundo {
     align-items: center;
