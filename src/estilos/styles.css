@@ -24,7 +24,7 @@
     align-items: center;
     display: flex;
     padding: 8em;
-    height: calc(95vh - 16em);
+    height: calc(94vh - 16em);
 }
 
 .container__rodape {
@@ -33,4 +33,15 @@
     justify-content: center;
     min-height: 5vh;
 }
+
+.rodape__texto {
+    font-family: var(--fonte-principal);
+    color: var(--violeta-forte);
+}
+
+.rodape__imagem {
+    width: 2rem;
+    margin-left: 0.75rem;
+}
+
 

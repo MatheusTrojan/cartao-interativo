@@ -7,39 +7,11 @@ function mascara(numeroCartao) {
         numeroCartao.value = numeroCartao.value + ' ';
 }
 
-function checkInputs(inputs) {
-    var filled = true;
-    
-    inputs.forEach(function(input) {
-        
-      if(input.value === "") {
-          filled = false;
-      }
-    
-    });
-    
-    return filled;
-    
-  }
-  var inputs = document.querySelectorAll("input");
-  var button = document.querySelector("button");
-  inputs.forEach(function(input) {
-      
-    input.addEventListener("keyup", function() {
-      if(checkInputs(inputs)) {
-        button.disabled = false;
-      } else {
-        button.disabled = true;
-      }
-    });
+function alerta(){
+  swal("Cartão cadastrado com sucesso", "","success", {
+    button: "Confirm",      
   });
-
-  
-  function alerta(){
-      swal("Cartão cadastrado com sucesso", "","success", {
-          button: "Confirm",      
-        });
-    }
+}
     
 const titular = document.getElementById("nome-completo");
 const numero = document.getElementById("numero-cartao");
@@ -51,6 +23,8 @@ const numeroNoCartao = document.querySelector(".cartao__frente--numero");
 const validadeMes = document.querySelector(".cartao__frente--mes");
 const validadeAno = document.querySelector(".cartao__frente--ano");
 const codigoNoCartao = document.querySelector(".cartao__fundo--codigo")
+const form = document.getElementById("formulario");
+const msgErroValidade = document.getElementById("validade-mensagem-erro");
 
 function inputNome() {
     nomeNoCartao.innerHTML = titular.value;
@@ -112,3 +86,51 @@ function inputCodigo() {
       codigoNoCartao.innerHTML = codigo.value;
     }
 }
+
+// <<<<<<<<<<< VALIDAÇÕES
+function checkInputs(inputs) {
+  var filled = true;
+  
+  inputs.forEach(function(input) {
+      
+    if(input.value === "") {
+        filled = false;
+    }
+  
+  });
+  
+  return filled;
+  
+}
+
+var inputs = document.querySelectorAll("input");
+var button = document.querySelector("button");
+inputs.forEach(function(input) {
+    
+  input.addEventListener("keyup", function() {
+    if(checkInputs(inputs)) {
+      button.disabled = false;
+    } else {
+      button.disabled = true;
+    }
+  });
+
+})
+
+enviar.addEventListener("click", function () {
+  checkInputs(inputs);
+  if (checkInputs(inputs) == false) {
+    event.preventDefault();
+  } else {
+    event.preventDefault();
+
+    alerta();
+
+    titular.value = ""
+    numero.value = ""
+    validade[0].value = ""
+    validade[1].value = ""
+    codigo.value = ""
+  }
+
+})

@@ -76,10 +76,11 @@
     grid-row: 8/9;
     padding: 0.6rem;
     cursor: pointer;
+    transition: 0.3s ease-in-out;
 }
 
-.formulario__botao:disabled {
-    background: var(--violeta-fraco);
+.formulario__botao:hover {
+    background: hsl(278, 79%, 22%);
 }
 
 .formulario__input {
@@ -88,8 +89,19 @@
     padding: 0.6rem;
 }
 
+input:focus {
+    outline: 0px solid hsl(249, 99%, 64%);
+    border-top-color: hsl(249, 99%, 64%);
+    border-right-color: hsl(278, 94%, 30%);
+    border-bottom-color: hsl(249, 99%, 64%);
+    border-left-color: hsl(278, 94%, 30%);
+}
+
+input:valid {
+    border: 1px solid hsl(130, 81%, 33%);
+}
+
 .formulario__input::placeholder {
     color: var(--violeta-fraco);
     font-family: var(--fonte-principal);
 }
-
