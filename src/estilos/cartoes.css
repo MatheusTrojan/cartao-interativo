@@ -100,3 +100,94 @@
     letter-spacing: 0.2rem;
 }
 
+@media screen and (max-width: 1100px) {
+    .cartao__frente, .cartao__fundo {
+        height: 190px;
+        width: 350px;
+    }
+
+    .cartao__frente--numero {
+        font-size: 1.2rem;
+        letter-spacing: 0.2rem;
+    }
+
+    .cartao__frente--nome, .cartao__frente--mes, .cartao__frente--ano {
+        font-size: 0.7rem;
+    }
+
+    .circulo1 {
+        height: 2em;
+        width: 2em;
+    }
+
+    .circulo2 {
+        height: 0.75em;
+        width: 0.75em;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .cartao__frente, .cartao__fundo {
+        padding: 1rem;
+        position: absolute;
+    }
+    .cartao__frente {
+        top: 11em;
+        left: 5em;
+        z-index: 1;
+    }
+    .cartao__fundo{
+        top: 3em;
+        left: 12em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .cartao__frente, .cartao__fundo {
+        height: 163px;
+        width: 300px;
+    }
+
+    .cartao__frente--numero {
+        font-size: 1.0rem;
+        letter-spacing: 0.2rem;
+    }
+
+    .cartao__frente {
+        top: 9em;
+        left: 1em;
+        z-index: 1;
+    }
+    .cartao__fundo{
+        top: 3em;
+        left: 7em;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .cartao__frente, .cartao__fundo {
+        padding: 1rem;
+        position: absolute;
+        height: 136px;
+        width: 250px;
+    }
+
+    .cartao__frente--numero, .cartao__fundo--codigo {
+        font-size: 0.8rem;
+        letter-spacing: 0.2rem;
+    }
+
+    .cartao__frente--nome, .cartao__frente--mes, .cartao__frente--ano {
+        font-size: 0.5rem;
+    }
+
+    .circulo1 {
+        height: 1.25em;
+        width: 1.25em;
+    }
+
+    .circulo2 {
+        height: 0.6em;
+        width: 0.6em;
+    }
+}

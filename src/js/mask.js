@@ -1,12 +1,3 @@
-function mascara(numeroCartao) { 
-    if(numeroCartao.value.length == 4)
-        numeroCartao.value = numeroCartao.value + ' ';
-    if(numeroCartao.value.length == 9)
-        numeroCartao.value = numeroCartao.value + ' ';
-    if(numeroCartao.value.length == 14)
-        numeroCartao.value = numeroCartao.value + ' ';
-}
-
 function alerta(){
   swal("Cartão cadastrado com sucesso", "","success", {
     button: "Confirm",      
@@ -58,7 +49,7 @@ function inputMes() {
     mesFormatado = mesFormatado.substring(0, 2);
     validade[0].value = mesFormatado;
     if (validade[0].value === "") {
-      validadeMes.innerHTML = "00";
+      validadeMes.innerHTML = "MM";
     } else {
       validadeMes.innerHTML = validade[0].value;
     }
@@ -69,7 +60,7 @@ function inputAno() {
     anoFormatado = anoFormatado.substring(0, 2);
     validade[1].value = anoFormatado;
     if (validade[1].value === "") {
-      validadeAno.innerHTML = "00";
+      validadeAno.innerHTML = "AA";
     } else {
       validadeAno.innerHTML = validade[1].value;
     }
@@ -81,7 +72,7 @@ function inputCodigo() {
     codigoFormatado = codigoFormatado.substring(0, 3);
     codigo.value = codigoFormatado;
     if (codigo.value === "") {
-      codigoNoCartao.innerHTML = "000";
+      codigoNoCartao.innerHTML = "XXX";
     } else {
       codigoNoCartao.innerHTML = codigo.value;
     }
@@ -131,6 +122,12 @@ enviar.addEventListener("click", function () {
     validade[0].value = ""
     validade[1].value = ""
     codigo.value = ""
+
+    nomeNoCartao.innerHTML = "Seu Nome"
+    numeroNoCartao.innerHTML = "0000 0000 0000 0000"
+    validadeMes.innerHTML = "MM"
+    validadeAno.innerHTML = "AA"
+    codigoNoCartao.innerHTML = "000"
   }
 
 })
