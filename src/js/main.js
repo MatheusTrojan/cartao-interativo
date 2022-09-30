@@ -1,6 +1,6 @@
 function alerta(){
   swal("Cartão cadastrado com sucesso", "","success", {
-    button: "Confirm",      
+    button: "Encerrar",      
   });
 }
     
