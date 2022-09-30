@@ -61,8 +61,6 @@ O usuário deverá conseguir:
 
 - [LinkedIn](https://www.linkedin.com/in/matheus-trojan/)
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
 ## Quem me ajudou
 
 Tive grande dificuldade na elaboração das funções do JavaScript, porém consegui realizar o desafio me baseando na solução de [DrMesazim](https://github.com/DrMESAZIM/interactive-details-form)
