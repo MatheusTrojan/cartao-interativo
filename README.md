@@ -60,6 +60,7 @@ O usuário deverá conseguir:
 ## Autor
 
 - [LinkedIn](https://www.linkedin.com/in/matheus-trojan/)
+- [Frontend Mentor](https://www.frontendmentor.io/profile/MatheusTrojan)
 
 ## Quem me ajudou
 
